@@ -7,7 +7,7 @@ import { navLinks } from "@/constants";
 const Navbar = () => {
   const [active, setActive] = useState("");
   return (
-    <nav className="absolute top-10 md:top-12 left-1/2 p-5 gap-6 lg:gap-12 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full">
+    <nav className="absolute top-10 md:top-12 left-1/2 p-5 gap-6 lg:gap-12 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-50">
       <ul className="hidden md:flex gap-10 list-none">
         {navLinks.slice(0, 2).map((link) => (
           <li
