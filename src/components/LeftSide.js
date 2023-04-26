@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { arrowLeft } from "@/assets";
 
 const LeftSide = () => {
   const [slideLeft, setSlideLeft] = useState(false);
@@ -15,6 +17,13 @@ const LeftSide = () => {
         <ArrowBackIcon
           className="absolute z-50 bg-[#ecddc2] rounded-r-full w-[50px] hover:w-[55px] h-[40px] p-[8px] top-1/2 left-0 transform -translate-y-1/2 transition-all duration-500 text-white cursor-pointer"
           onClick={() => setSlideLeft(!slideLeft)}
+        />
+      </div>
+      <div className="absolute top-[70%] md:top-[75%] right-[15%]">
+        <Image
+          src={arrowLeft}
+          alt="arrow"
+          className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 transform -scale-x-100 rotate-360"
         />
       </div>
     </section>

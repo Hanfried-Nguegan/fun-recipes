@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Donut from "./Donut";
+import TextRight from "./TextRight";
+import { arrowRight } from "@/assets";
 
 const RightSide = () => {
   const [slideRight, setSlideRight] = useState(false);
@@ -20,6 +23,14 @@ const RightSide = () => {
         />
       </div>
       <Donut />
+      <TextRight />
+      <div className="absolute top-[70%] md:top-[75%] left-[15%]">
+        <Image
+          src={arrowRight}
+          alt="arrow"
+          className="arrowRight w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 "
+        />
+      </div>
     </section>
   );
 };
