@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { DonutCanvas } from "@/components/canvas";
+import Donut from "./Donut";
 
 const RightSide = () => {
+  const [slideRight, setSlideRight] = useState(false);
+
   return (
-    <section className="absolute w-[50%] right-0 h-screen bg-[#f9c8db]">
+    <section
+      className={`absolute w-[50%] right-0 h-screen bg-pinkychoco ${
+        slideRight
+          ? "w-full transition-all duration-1000 ease-cubic-bezier(0.87, 0.76, 0.33, 0.98)"
+          : ""
+      }`}
+    >
       <div className="absolute inset-y-0 right-0 w-28 flex items-center justify-center">
-        <ArrowForwardIcon className="absolute bg-[#635dad] rounded-l-full w-[50px] hover:w-[55px] transition-all duration-500 h-[40px] p-[8px] top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer" />{" "}
+        <ArrowForwardIcon
+          className="absolute bg-[#635dad] rounded-l-full w-[50px] hover:w-[55px] transition-all duration-500 h-[40px] p-[8px] top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer"
+          onClick={() => setSlideRight(!slideRight)}
+        />
       </div>
-      <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2  h-[300px] md:h-[400px]">
-        <DonutCanvas />
-        <h1 className="textstyle absolute top-12 md:top-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-3xl font-extrabold -rotate-12">
-          <span className="text-[50px]">Choose</span> <br />
-          <span className="font-medium">your </span>
-          <span className="text-[45px]">Side</span>
-        </h1>
-      </div>
+      <Donut />
     </section>
   );
 };
