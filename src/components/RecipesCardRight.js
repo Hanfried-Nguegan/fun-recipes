@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { recipesDataRight } from "@/constants";
 
-const RecipeCard = ({ image, title, timer, description, index }) => {
+const RecipeCard = ({ image, title, timer, description }) => {
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
   return (
-    <div className="absolute bg-white w-[140px] md:w-[180px] h-[180px] md:h-[220px] bottom-[2%] left-[42%] rounded-[10px] shadow-2xl cursor-pointer">
+    <div
+      className={`bg-white min-w-[140px] md:w-[180px] min-h-[180px] rounded-[10px] shadow-2xl cursor-pointer ${
+        isHover ? "scale-105" : ""
+      } transition-all duration-500`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="relative">
         <Image src={image} alt="image" />
         <div className="absolute bottom-0 -left-1/2 transform translate-x-1/2 translate-y-1/2 flex items-center justify-between p-2 w-full">
@@ -27,7 +42,7 @@ const RecipeCard = ({ image, title, timer, description, index }) => {
 
 const RecipesCardRight = () => {
   return (
-    <div>
+    <div className="flex absolute bottom-[5%] left-[42%] md:left-[36%] gap-8">
       {recipesDataRight.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
