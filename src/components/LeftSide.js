@@ -7,7 +7,7 @@ const LeftSide = () => {
   const [slideLeft, setSlideLeft] = useState(false);
   return (
     <section
-      className={`absolute w-[50%] left-0 h-screen bg-white ${
+      className={`absolute w-[50%] left-0 h-screen bg-[#fefcfe] ${
         slideLeft
           ? "w-full transition-all duration-1000 ease-cubic-bezier(0.87, 0.76, 0.33, 0.98)"
           : ""
