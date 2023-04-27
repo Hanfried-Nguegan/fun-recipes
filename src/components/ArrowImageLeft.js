@@ -4,7 +4,7 @@ import { arrowLeft } from "@/assets";
 
 const ArrowImageLeft = () => {
   return (
-    <div className="absolute top-[68%] md:top-[70%] right-[15%]">
+    <div className="absolute top-[68%] md:top-[70%] right-[12%]">
       <Image
         src={arrowLeft}
         alt="arrow"
