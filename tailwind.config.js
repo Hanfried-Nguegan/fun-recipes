@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         pinkychoco: "#f9c8da",
       },
+      screens: {
+        sm: "448px",
+        md: "768px",
+        lg: "1024px",
+      },
     },
   },
   plugins: [],

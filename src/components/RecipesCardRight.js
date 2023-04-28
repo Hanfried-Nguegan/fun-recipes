@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { recipesDataRight } from "@/constants";
+import AddRecipe from "./AddRecipe";
 
 const RecipeCard = ({ image, title, timer, description }) => {
   const [isHover, setIsHover] = useState(false);
@@ -14,14 +15,14 @@ const RecipeCard = ({ image, title, timer, description }) => {
   };
   return (
     <div
-      className={`bg-white min-w-[140px] md:w-[180px] min-h-[180px] rounded-[10px] shadow-2xl cursor-pointer ${
+      className={`bg-white min-w-[140px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
         isHover ? "scale-105" : ""
       } transition-all duration-500`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative">
-        <Image src={image} alt="image" />
+        <Image src={image} alt="image" className="rounded-t-[10px]" />
         <div className="absolute bottom-0 -left-1/2 transform translate-x-1/2 translate-y-1/2 flex items-center justify-between p-2 w-full">
           <h1 className="font-bold textstyle text-md md:text-lg lg:text-xl">
             {title}
@@ -46,6 +47,7 @@ const RecipesCardRight = () => {
       {recipesDataRight.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
+      <AddRecipe />
     </div>
   );
 };
