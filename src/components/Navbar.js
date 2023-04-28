@@ -6,6 +6,7 @@ import { navLinks } from "@/constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+
   return (
     <nav className="absolute top-10 md:top-12 left-1/2 p-5 gap-6 lg:gap-12 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-50">
       <ul className="hidden md:flex gap-10 list-none">
@@ -21,13 +22,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <Link
-        href="/"
-        onClick={() => {
-          setActive("");
-          window.scrollTo(0, 0);
-        }}
-      >
+      <Link href="/">
         <Image src={logo} alt="logo" className="w-16 h-16 md:h-20 md:w-20" />
       </Link>
       <ul className="hidden list-none md:flex gap-10">

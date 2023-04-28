@@ -12,3 +12,39 @@
 .textstyle {
   font-family: "Slackey", cursive;
 }
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 2s all cubic-bezier(0.87, 0.76, 0.33, 0.98);
+}
+
+.split.left {
+  left: 0;
+}
+
+.split.right {
+  right: 0;
+}
+
+.hover-left .split.left {
+  width: 99%;
+}
+.hover-left .split.right {
+  width: 0%;
+}
+
+.hover-right .split.right {
+  width: 99%;
+}
+
+.hover-right .split.left {
+  width: 0%;
+}
