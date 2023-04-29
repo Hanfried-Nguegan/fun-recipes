@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Donut from "./Donut";
 import TextRight from "./TextRight";
