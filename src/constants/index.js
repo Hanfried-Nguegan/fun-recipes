@@ -1,4 +1,4 @@
-import { cake, pancakes, pizza } from "../assets";
+import { cake, pancakes, pizza, blueberry } from "../assets";
 
 export const navLinks = [
   {
@@ -41,5 +41,22 @@ export const recipesDataRight = [
     title: "Pizza",
     timer: "40",
     description: "Homemade Pizza with chicken and peperroni",
+  },
+];
+
+export const FeaturedDataRight = [
+  {
+    id: 1,
+    image: blueberry,
+    title: "Blueberry Ice Cream",
+    timer: "30",
+    ingredients: [
+      "1 cup fresh blueberries",
+      "1 cup heavy cream",
+      "1 cup whole milk",
+      "3/4 cup granulated sugar",
+      "1 teaspoon vanilla extract",
+      "Pinch of salt",
+    ],
   },
 ];

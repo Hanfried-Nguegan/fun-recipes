@@ -48,3 +48,29 @@
 .hover-right .split.left {
   width: 0%;
 }
+
+/* TailwindCss Utility Classes */
+
+.arrowright {
+  @apply absolute z-50 bg-[#635dad] rounded-l-full w-[50px] h-[40px] p-[8px] top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer;
+}
+
+.bigtext {
+  @apply textstyle absolute text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] top-[40%] md:top-[35%] left-[30%] md:left-[20%] lg:left-[18%] -rotate-12 transform translate-y-[-50%] text-[#fad6e6];
+}
+
+.sugartext {
+  @apply textstyle absolute text-[3rem] md:text-[4.5rem] lg:text-[6.5rem] top-[50%] left-[15%] lg:left-[10%] -rotate-12 transform translate-y-[-50%] text-[#fad6e6];
+}
+
+.mmmmtext {
+  @apply textstyle absolute text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] top-[63%] lg:top-[68%] left-[8%] -rotate-12 transform translate-y-[-50%] text-[#fad6e6];
+}
+
+.beautifultext {
+  @apply textstyle absolute text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] top-[45%] md:top-[50%] left-[30%]  lg:left-[45%] -rotate-12 transform translate-y-[-50%] text-[#f5f4f3];
+}
+
+.dishestext {
+  @apply textstyle absolute text-[3rem] md:text-[4.5rem] lg:text-[6.5rem] top-[55%] md:top-[65%] left-[20%] lg:left-[30%] -rotate-12 transform translate-y-[-50%] text-[#f5f4f3];
+}

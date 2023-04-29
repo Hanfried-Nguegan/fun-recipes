@@ -5,9 +5,11 @@ import Donut from "./Donut";
 import TextRight from "./TextRight";
 import ArrowImageRight from "./ArrowImageRight";
 import RecipesCardRight from "./RecipesCardRight";
+import FeaturedRecipeRight from "./FeaturedRecipeRight";
 
 const RightSide = () => {
   const [showArrowButton, setShowArrowButton] = useState(true);
+  const [showFeatured, setShowFeatured] = useState(false);
 
   const variants = {
     visible: { opacity: 1, x: 0 },
@@ -17,8 +19,14 @@ const RightSide = () => {
   return (
     <section
       className="split right bg-pinkychoco"
-      onMouseEnter={() => setShowArrowButton(false)}
-      onMouseLeave={() => setShowArrowButton(true)}
+      onMouseEnter={() => {
+        setShowArrowButton(false);
+        setShowFeatured(true);
+      }}
+      onMouseLeave={() => {
+        setShowArrowButton(true);
+        setShowFeatured(false);
+      }}
     >
       <div className="absolute inset-y-0 right-0 w-28 flex items-center justify-center">
         <motion.div
@@ -26,7 +34,7 @@ const RightSide = () => {
           initial="visible"
           animate={showArrowButton ? "visible" : "hidden"}
           transition={{ duration: 1 }}
-          className="absolute z-50 bg-[#635dad] rounded-l-full w-[50px] h-[40px] p-[8px] top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer"
+          className="arrowright"
         >
           <ArrowForwardIcon />
         </motion.div>
@@ -35,6 +43,13 @@ const RightSide = () => {
       <TextRight />
       <ArrowImageRight />
       <RecipesCardRight />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={showFeatured ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <FeaturedRecipeRight />
+      </motion.div>
     </section>
   );
 };
