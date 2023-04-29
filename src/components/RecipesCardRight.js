@@ -15,7 +15,7 @@ const RecipeCard = ({ image, title, timer, description }) => {
   };
   return (
     <div
-      className={`bg-white ml-4 min-w-[140px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
+      className={`bg-white ml-5 min-w-[140px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
         isHover ? "scale-105" : ""
       } transition-all duration-500`}
       onMouseEnter={handleMouseEnter}
@@ -43,11 +43,13 @@ const RecipeCard = ({ image, title, timer, description }) => {
 
 const RecipesCardRight = () => {
   return (
-    <div className="flex absolute bottom-[3%] left-[42%] md:left-[36%] ">
+    <div className="flex absolute bottom-[3%] left-[38%] md:left-[30%] ">
       {recipesDataRight.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
-      <AddRecipe />
+      <div className="ml-5">
+        <AddRecipe />
+      </div>
     </div>
   );
 };
