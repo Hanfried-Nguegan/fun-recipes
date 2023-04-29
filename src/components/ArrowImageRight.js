@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ArrowImageRight = () => {
   return (
-    <div className="absolute top-[68%] md:top-[70%] left-[12%]">
+    <div className="absolute top-[68%] md:top-[70%] left-[10%]">
       <Image
         src={arrowRight}
         alt="arrow"
