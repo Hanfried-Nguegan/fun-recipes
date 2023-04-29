@@ -24,7 +24,7 @@ const RecipeCard = ({ image, title, timer, description }) => {
       <div className="relative">
         <Image src={image} alt="image" className="rounded-t-[10px]" />
         <div className="absolute bottom-0 -left-1/2 transform translate-x-1/2 translate-y-1/2 flex items-center justify-between p-2 w-full">
-          <h1 className="font-bold textstyle text-md md:text-lg lg:text-xl">
+          <h1 className="font-bold textstyle text-sm md:text-md lg:text-lg">
             {title}
           </h1>
           <p className="flex flex-col items-center bg-[#625eaf] rounded-full text-white p-2 text-xs md:text-md leading-3 font-semibold">

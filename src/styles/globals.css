@@ -23,7 +23,7 @@
   position: absolute;
   width: 50%;
   height: 100%;
-  transition: 2s all cubic-bezier(0.87, 0.76, 0.33, 0.98);
+  transition: 1.8s all cubic-bezier(0.87, 0.76, 0.33, 0.98);
 }
 
 .split.left {
