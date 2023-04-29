@@ -3,6 +3,10 @@ import { Navbar, LeftSide, RightSide } from "@/components";
 
 export default function Home() {
   useEffect(() => {
+    if (typeof window !== "object") {
+      return;
+    }
+
     const content = document.querySelector(".content");
     const left = document.querySelector(".left");
     const right = document.querySelector(".right");
