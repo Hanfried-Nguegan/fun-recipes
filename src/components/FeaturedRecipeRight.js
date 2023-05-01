@@ -30,7 +30,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
               {timer}
               <br /> <span className="text-white">min</span>
             </p>
-            <p className="flex items-center bg-[#625eaf] rounded-full text-white p-2 text-[10px] md:text-sm leading-3 font-semibold">
+            <p className="flex items-center bg-[#625eaf] rounded-full text-white p-2 text-[10px] md:text-sm leading-3 font-semibold ml-2">
               FULL RECIPE
               <span className="text-white">
                 <ArrowForwardIcon />
