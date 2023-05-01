@@ -44,7 +44,7 @@ export const recipesDataRight = [
   },
 ];
 
-export const FeaturedDataRight = [
+export const featuredDataRight = [
   {
     id: 1,
     image: blueberry,
