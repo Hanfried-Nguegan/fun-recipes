@@ -17,7 +17,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
           />
         </div>
         <div className="flex flex-col w-[52%] h-full p-3">
-          <h1 className="textstyle flex-wrap font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+          <h1 className="textstyle flex-wrap font-bold text-[12px] md:text-[20px] lg:text-[25px]">
             {title}
           </h1>
           <ul className="mt-1 ">
