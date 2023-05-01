@@ -74,3 +74,7 @@
 .dishestext {
   @apply textstyle absolute text-[3rem] md:text-[4.5rem] lg:text-[6.5rem] top-[55%] md:top-[65%] left-[20%] lg:left-[30%] -rotate-12 transform translate-y-[-50%] text-[#f5f4f3];
 }
+
+.featuredcard {
+  @apply relative bg-white min-w-[260px] md:w-[400px] lg:w-[460px] min-h-[250px] md:h-[250px] lg:h-[270px] rounded-[10px];
+}
