@@ -20,12 +20,12 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
           <h1 className="textstyle flex-wrap font-bold text-[15px] md:text-[20px] lg:text-[25px]">
             {title}
           </h1>
-          <ul className="mt-3 ">
+          <ul className="mt-1 ">
             <li className="text-[10px] md:text-[12px] lg:text-[14px] tracking-wider">
               {ingredients}
             </li>
           </ul>
-          <div className="flex items-center justify-between mt-3 gap-2">
+          <div className="flex items-center justify-between mt-2 ">
             <p className="flex flex-col items-center bg-[#625eaf] rounded-full text-white p-2 text-xs leading-3 font-semibold">
               {timer}
               <br /> <span className="text-white">min</span>
