@@ -7,7 +7,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const FeaturedCard = ({ image, title, timer, ingredients }) => {
   return (
-    <div className="relative bg-white min-w-[240px] md:w-[400px] lg:w-[460px] min-h-[250px] md:h-[250px] lg:h-[270px] rounded-[10px] shadow-xl">
+    <div className="relative bg-white min-h-full min-w-full rounded-[10px] shadow-xl">
       <div className="flex items-center w-full h-full">
         <div className="w-[48%] h-full relative">
           <Image
@@ -21,16 +21,18 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
             {title}
           </h1>
           <ul className="mt-1 ">
-            <li className="w-full text-[10px] md:text-[12px] lg:text-[14px] tracking-wider">
-              {ingredients}
-            </li>
+            {ingredients.map((ingredient) => (
+              <li className="w-full text-[6px] md:text-[8px] lg:text-[10px] tracking-wider">
+                {ingredient}
+              </li>
+            ))}
           </ul>
-          <div className="flex w-full items-center justify-between mt-2 ">
+          <div className="flex w-full items-center justify-between mt-3 ">
             <p className="flex flex-col items-center bg-[#625eaf] rounded-full text-white p-2 text-xs leading-3 font-semibold">
               {timer}
               <br /> <span className="text-white">min</span>
             </p>
-            <p className="flex items-center bg-[#625eaf] rounded-full text-white p-2 text-[10px] md:text-sm leading-3 font-semibold ml-2">
+            <p className="flex items-center bg-[#625eaf] rounded-full text-white p-2 text-[10px] md:text-[] leading-3 font-semibold ml-2">
               FULL RECIPE
               <span className="text-white">
                 <ArrowForwardIcon />

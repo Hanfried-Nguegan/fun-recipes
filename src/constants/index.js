@@ -46,7 +46,6 @@ export const recipesDataRight = [
 
 export const featuredDataRight = [
   {
-    id: 1,
     image: blueberry,
     title: "Blueberry Ice Cream",
     timer: "30",
