@@ -10,10 +10,11 @@ import FeaturedRecipeRight from "./FeaturedRecipeRight";
 const RightSide = () => {
   const [showArrowButton, setShowArrowButton] = useState(true);
   const [showFeatured, setShowFeatured] = useState(false);
+  const [showArrowImage, setShowArrowImage] = useState(true);
 
   const variants = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
   };
 
   return (
@@ -22,10 +23,12 @@ const RightSide = () => {
       onMouseEnter={() => {
         setShowArrowButton(false);
         setShowFeatured(true);
+        setShowArrowImage(false);
       }}
       onMouseLeave={() => {
         setShowArrowButton(true);
         setShowFeatured(false);
+        setShowArrowImage(true);
       }}
     >
       <div className="absolute inset-y-0 right-0 w-28 flex items-center justify-center">
@@ -41,7 +44,14 @@ const RightSide = () => {
       </div>
       <Donut />
       <TextRight />
-      <ArrowImageRight />
+      <motion.div
+        variants={variants}
+        initial="visible"
+        animate={showArrowImage ? "visible" : "hidden"}
+        transition={{ duration: 1 }}
+      >
+        <ArrowImageRight />
+      </motion.div>
       <RecipesCardRight />
       <motion.div
         initial={{ opacity: 0 }}

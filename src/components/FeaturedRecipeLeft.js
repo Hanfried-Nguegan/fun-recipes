@@ -48,9 +48,9 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
   );
 };
 
-const FeaturedRecipeRight = () => {
+const FeaturedRecipeLeft = () => {
   return (
-    <div className="absolute top-[18%] left-[32%] md:left-[31.5%]">
+    <div className="absolute top-[18%] right-[32%] md:right-[31.5%]">
       {featuredDataRight.map((data, index) => (
         <FeaturedCard key={data.title} index={index} {...data} />
       ))}
@@ -58,4 +58,4 @@ const FeaturedRecipeRight = () => {
   );
 };
 
-export default FeaturedRecipeRight;
+export default FeaturedRecipeLeft;

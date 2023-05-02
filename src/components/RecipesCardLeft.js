@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { recipesDataRight } from "@/constants";
-import AddRecipe from "./AddRecipe";
+import AddLeft from "./AddLeft";
 
 const RecipeCard = ({ image, title, timer, description }) => {
   const [isHover, setIsHover] = useState(false);
@@ -41,17 +41,17 @@ const RecipeCard = ({ image, title, timer, description }) => {
   );
 };
 
-const RecipesCardRight = () => {
+const RecipesCardLeft = () => {
   return (
-    <div className="flex absolute bottom-[3%] left-[30%] ">
+    <div className="flex absolute bottom-[3%] right-[30%] flex-row-reverse">
       {recipesDataRight.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
       <div className="ml-5">
-        <AddRecipe />
+        <AddLeft />
       </div>
     </div>
   );
 };
 
-export default RecipesCardRight;
+export default RecipesCardLeft;
