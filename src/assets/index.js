@@ -7,6 +7,10 @@ import cake from "./raspberry_cake.jpg";
 import pancakes from "./pancakes.jpg";
 import pizza from "./pizza.webp";
 import blueberry from "./blueberry_icecream.jpg";
+import beef from "./beef.jpg";
+import spaghetti from "./spaghetti.jpg";
+import shrimp from "./shrimp.jpg";
+import ndole from "./ndole.jpg";
 
 export {
   logo,
@@ -18,4 +22,8 @@ export {
   pancakes,
   pizza,
   blueberry,
+  beef,
+  spaghetti,
+  shrimp,
+  ndole,
 };

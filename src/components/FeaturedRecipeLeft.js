@@ -1,5 +1,5 @@
 import React from "react";
-import { featuredDataRight } from "@/constants";
+import { featuredDataLeft } from "@/constants";
 import SweetLife from "./SweetLife";
 import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -51,7 +51,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
 const FeaturedRecipeLeft = () => {
   return (
     <div className="absolute top-[18%] right-[32%] md:right-[31.5%]">
-      {featuredDataRight.map((data, index) => (
+      {featuredDataLeft.map((data, index) => (
         <FeaturedCard key={data.title} index={index} {...data} />
       ))}
     </div>

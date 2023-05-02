@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { recipesDataRight } from "@/constants";
+import { recipesDataLeft } from "@/constants";
 import AddLeft from "./AddLeft";
 
 const RecipeCard = ({ image, title, timer, description }) => {
@@ -44,7 +44,7 @@ const RecipeCard = ({ image, title, timer, description }) => {
 const RecipesCardLeft = () => {
   return (
     <div className="flex absolute bottom-[3%] right-[32%] flex-row-reverse">
-      {recipesDataRight.map((recipe, index) => (
+      {recipesDataLeft.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
       <div className="ml-5">
