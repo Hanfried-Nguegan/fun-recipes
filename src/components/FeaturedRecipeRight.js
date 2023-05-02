@@ -7,7 +7,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const FeaturedCard = ({ image, title, timer, ingredients }) => {
   return (
-    <div className="relative bg-white min-h-full min-w-full rounded-[10px] shadow-xl">
+    <div className="relative bg-white min-h-full  min-w-[240px] md:w-[400px] lg:w-[560px] rounded-[10px] shadow-xl">
       <div className="flex items-center w-full h-full">
         <div className="w-[48%] h-full relative">
           <Image
@@ -17,12 +17,12 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
           />
         </div>
         <div className="flex flex-col w-[52%] h-full p-3">
-          <h1 className="textstyle w-full flex-wrap font-bold text-[12px] md:text-[20px] lg:text-[25px]">
+          <h1 className="textstyle w-full flex-wrap font-bold text-[14px] md:text-[20px] lg:text-[25px]">
             {title}
           </h1>
           <ul className="mt-1 ">
             {ingredients.map((ingredient) => (
-              <li className="w-full text-[6px] md:text-[8px] lg:text-[10px] tracking-wider">
+              <li className="w-full text-[6px] md:text-[8px] lg:text-[11px] font-semibold tracking-wider">
                 {ingredient}
               </li>
             ))}
@@ -48,7 +48,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
 
 const FeaturedRecipeRight = () => {
   return (
-    <div className="absolute top-[18%] left-[34%] md:left-[32%]">
+    <div className="absolute top-[18%] left-[32%] md:left-[31.5%]">
       {featuredDataRight.map((data, index) => (
         <FeaturedCard key={data.title} index={index} {...data} />
       ))}
