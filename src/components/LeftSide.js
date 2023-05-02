@@ -35,8 +35,9 @@ const LeftSide = () => {
           initial="visible"
           animate={showArrowButton ? "visible" : "hidden"}
           transition={{ duration: 1 }}
+          className="arrowLeft"
         >
-          <ArrowBackIcon className="absolute z-50 bg-[#f5dcad] rounded-r-full w-[50px] h-[40px] p-[8px] top-1/2 left-0 transform -translate-y-1/2 text-white cursor-pointer" />
+          <ArrowBackIcon />
         </motion.div>
       </div>
       <TextLeft />

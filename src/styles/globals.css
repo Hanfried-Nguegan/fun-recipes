@@ -55,6 +55,10 @@
   @apply absolute z-50 bg-[#635dad] rounded-l-full w-[50px] h-[40px] p-[8px] top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer;
 }
 
+.arrowLeft {
+  @apply absolute z-50 bg-[#f5dcad] rounded-r-full w-[50px] h-[40px] p-[8px] top-1/2 left-0 transform -translate-y-1/2 text-white cursor-pointer;
+}
+
 .bigtext {
   @apply textstyle absolute text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] top-[40%] md:top-[35%] left-[30%] md:left-[20%] lg:left-[18%] -rotate-12 transform translate-y-[-50%] text-[#fad6e6];
 }

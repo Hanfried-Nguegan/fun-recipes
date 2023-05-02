@@ -43,7 +43,7 @@ const RecipeCard = ({ image, title, timer, description }) => {
 
 const RecipesCardLeft = () => {
   return (
-    <div className="flex absolute bottom-[3%] right-[30%] flex-row-reverse">
+    <div className="flex absolute bottom-[3%] right-[32%] flex-row-reverse">
       {recipesDataRight.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
