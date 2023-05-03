@@ -64,10 +64,12 @@ const RecipeCard = ({
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="bg-white w-[50%] rounded-lg p-4 cursor-pointer"
+          className="bg-white w-full md:w-[50%] rounded-lg p-4 cursor-pointer"
         >
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-300">
-            <h1 className="textstyle font-bold text-lg mb-2">{title}</h1>
+            <h1 className="textstyle font-bold text-lg md:text-xl mb-2">
+              {title}
+            </h1>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
               <CloseIcon
                 className="border border-black rounded-full"
@@ -76,11 +78,11 @@ const RecipeCard = ({
             </motion.div>
           </div>
 
-          <h2 className="text-sm text-center mb-2">
-            <span className="text-md font-bold">Ingredients: </span>
+          <h2 className="text-sm md:text-base text-center mb-2">
+            <span className="text-md md:text-lg font-bold">Ingredients: </span>
             {ingredients}
           </h2>
-          <h3 className="text-sm">{recipe}</h3>
+          <h3 className="text-sm md:text-base">{recipe}</h3>
         </motion.div>
       </div>
     );
