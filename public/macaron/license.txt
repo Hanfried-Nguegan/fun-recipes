@@ -1,0 +1,11 @@
+Model Information:
+* title:	Macaron Marie-Antoinette
+* source:	https://sketchfab.com/3d-models/macaron-marie-antoinette-2e847c5f8c83454ba7a5a562c9a32746
+* author:	Thomas Flynn (https://sketchfab.com/nebulousflynn)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Macaron Marie-Antoinette" (https://sketchfab.com/3d-models/macaron-marie-antoinette-2e847c5f8c83454ba7a5a562c9a32746) by Thomas Flynn (https://sketchfab.com/nebulousflynn) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
