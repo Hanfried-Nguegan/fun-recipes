@@ -64,7 +64,7 @@ const RecipeCard = ({
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="bg-white w-full md:w-[50%] rounded-lg p-4 cursor-pointer"
+          className="bg-white w-full md:w-[60%] rounded-lg p-4 cursor-pointer"
         >
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-300">
             <h1 className="textstyle font-bold text-lg md:text-xl mb-2">
@@ -91,7 +91,7 @@ const RecipeCard = ({
   return (
     <>
       <div
-        className={`bg-white ml-5 min-w-[140px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
+        className={`bg-white ml-5 min-w-[160px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
           isHover ? "scale-105" : ""
         } transition-all duration-500`}
         onMouseEnter={handleMouseEnter}
