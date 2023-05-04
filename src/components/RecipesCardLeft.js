@@ -10,7 +10,7 @@ const RecipesCardLeft = () => {
       {recipesDataLeft.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
-      <div className="ml-5 mr-3">
+      <div className="ml-8 mr-3">
         <AddLeft />
       </div>
     </div>

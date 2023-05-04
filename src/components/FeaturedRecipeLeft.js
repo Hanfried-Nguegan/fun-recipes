@@ -23,7 +23,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
             {ingredients.map((ingredient, index) => (
               <li
                 key={index}
-                className="w-full text-[6px] md:text-[8px] lg:text-[11px] font-semibold tracking-wider"
+                className="w-full text-[8px] md:text-[8px] lg:text-[11px] font-semibold tracking-wider"
               >
                 {ingredient}
               </li>
