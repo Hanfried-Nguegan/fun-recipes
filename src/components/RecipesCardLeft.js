@@ -6,7 +6,7 @@ import RecipeCard from "./RecipeCard";
 
 const RecipesCardLeft = () => {
   return (
-    <div className="flex absolute bottom-[3%] right-[31%] flex-row-reverse overflow-scroll scroll-smooth overflow-y-hidden scrollbar-hide max-w-[70%]">
+    <div className="flex absolute bottom-[3%] right-[32%] flex-row-reverse overflow-scroll scroll-smooth overflow-y-hidden scrollbar-hide max-w-[70%]">
       {recipesDataLeft.map((recipe, index) => (
         <RecipeCard key={recipe.title} index={index} {...recipe} />
       ))}
