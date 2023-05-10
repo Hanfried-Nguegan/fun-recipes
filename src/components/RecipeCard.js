@@ -87,11 +87,10 @@ const RecipeCard = ({
       </div>
     );
   };
-
   return (
     <>
       <div
-        className={`bg-white ml-5 min-w-[160px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-2xl cursor-pointer ${
+        className={`bg-white ml-5 min-w-[160px] md:w-[180px] min-h-[180px] md:h-[220px] rounded-[10px] shadow-xl cursor-pointer ${
           isHover ? "scale-105" : ""
         } transition-all duration-500`}
         onMouseEnter={handleMouseEnter}
@@ -99,7 +98,14 @@ const RecipeCard = ({
         onClick={handleCardClick}
       >
         <div className="relative">
-          <Image src={image} alt="image" className="rounded-t-[10px]" />
+          <Image
+            src={image}
+            alt="image"
+            className="rounded-t-[10px] w-full h-auto"
+            width={100}
+            height={100}
+          />
+
           <div className="absolute bottom-0 -left-1/2 transform translate-x-1/2 translate-y-1/2 flex items-center justify-between p-2 w-full">
             <h1 className="font-bold textstyle text-sm md:text-md lg:text-lg">
               {title}

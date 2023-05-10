@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navbar, LeftSide, RightSide } from "@/components";
+import { Navbar, LeftSide, RightSide } from "../components";
 
 export default function Home() {
   useEffect(() => {

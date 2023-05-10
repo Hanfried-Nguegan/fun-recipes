@@ -1,5 +1,5 @@
 import React from "react";
-import { DonutCanvas } from "@/components/canvas";
+import { DonutCanvas } from "../components/canvas";
 
 const Donut = () => {
   return (

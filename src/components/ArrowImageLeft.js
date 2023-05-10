@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { arrowLeft } from "@/assets";
+import { arrowLeft } from "../assets";
 
 const ArrowImageLeft = () => {
   return (
