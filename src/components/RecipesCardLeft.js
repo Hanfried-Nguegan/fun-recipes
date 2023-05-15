@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AddLeft from "./AddLeft";
+import AddMainDish from "./AddMainDish";
 import RecipeCard from "./RecipeCard";
 import sanityClient from "../../sanity";
 import { urlFor } from "../../sanity";
@@ -33,8 +33,8 @@ const RecipesCardLeft = () => {
           recipe={dish.recipe}
         />
       ))}
-      <div className="ml-8 mr-3">
-        <AddLeft />
+      <div className="ml-10 mr-1">
+        <AddMainDish />
       </div>
     </div>
   );

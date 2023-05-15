@@ -5,7 +5,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const FeaturedCard = ({ image, title, timer, ingredients }) => {
   return (
-    <div className="relative bg-white min-h-full  min-w-[240px] md:w-[400px] lg:w-[560px] rounded-[10px] shadow-xl cursor-pointer">
+    <div className="relative hidden md:flex bg-white min-h-full  min-w-[240px] md:w-[400px] lg:w-[560px] rounded-[10px] shadow-xl cursor-pointer">
       <div className="flex items-center w-full h-full">
         <div className="w-[48%] h-full relative">
           <Image

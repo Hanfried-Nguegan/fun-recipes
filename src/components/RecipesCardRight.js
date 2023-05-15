@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AddRecipe from "./AddRecipe";
+import AddDessert from "./AddDessert";
 import RecipeCard from "./RecipeCard";
 import sanityClient from "../../sanity";
 import { urlFor } from "../../sanity";
@@ -36,7 +36,7 @@ const RecipesCardRight = () => {
           />
         ))}
         <div className="ml-5 mr-3">
-          <AddRecipe />
+          <AddDessert />
         </div>
       </div>
     </>

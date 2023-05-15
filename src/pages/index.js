@@ -32,10 +32,8 @@ export default function Home() {
     <>
       <main className="content relative w-full h-screen overflow-hidden">
         <Navbar />
-        <div className="relative w-full h-full">
-          <LeftSide />
-          <RightSide />
-        </div>
+        <LeftSide />
+        <RightSide />
       </main>
     </>
   );

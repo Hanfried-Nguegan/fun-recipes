@@ -57,7 +57,6 @@ const RightSide = () => {
         initial={{ opacity: 0 }}
         animate={showFeatured ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 1 }}
-        className="hidden md:flex"
       >
         <FeaturedRecipeRight />
       </motion.div>
