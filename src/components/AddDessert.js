@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { urlFor } from "../../sanity";
 
 const AddDessert = () => {
   const [showForm, setShowForm] = useState(false);
@@ -9,7 +10,7 @@ const AddDessert = () => {
   };
 
   const FormModal = () => {
-    const [title, setTitle] = useState("");
+    const [name, setName] = useState("");
     const [image, setImage] = useState(null);
     const [timer, setTimer] = useState("");
     const [description, setDescription] = useState("");
@@ -26,8 +27,29 @@ const AddDessert = () => {
       setIngredients(updatedIngredients);
     };
 
+    const postDessert = async () => {
+      const dessertInfo = {
+        name: name,
+        image: image,
+        timer: timer,
+        description: description,
+        ingredients: ingredients,
+        recipe: recipe,
+      };
+      console.log(dessertInfo);
+
+      const result = await fetch(`/api/addDessert`, {
+        body: JSON.stringify(dessertInfo),
+        method: "POST",
+      });
+
+      const json = await result.json();
+    };
+
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      postDessert();
 
       // Submit the form data
       // You can access the form values using the state variables
@@ -54,17 +76,17 @@ const AddDessert = () => {
               <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
                 <div className="mb-4 mt-2">
                   <label
-                    htmlFor="title"
+                    htmlFor="name"
                     className="block text-gray-700 font-semibold mb-1"
                   >
                     Name of Dessert:
                   </label>
                   <input
                     type="text"
-                    id="title"
+                    id="name"
                     className="w-full px-3 py-2 bg-gray-200 text-gray-800 rounded-md focus:outline-none focus:bg-white"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
 
@@ -79,7 +101,7 @@ const AddDessert = () => {
                     type="file"
                     id="image"
                     className="w-full bg-transparent text-gray-700"
-                    onChange={(e) => setImage(e.target.files[0])}
+                    onChange={handleImageChange}
                   />
                 </div>
 
@@ -160,6 +182,7 @@ const AddDessert = () => {
                 <button
                   type="submit"
                   className="bg-[#e5799b] hover:bg-[#e5799b] hover:bg-opacity-75 text-white py-2 px-4 rounded-md"
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>

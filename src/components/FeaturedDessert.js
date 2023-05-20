@@ -3,7 +3,7 @@ import SweetLife from "./SweetLife";
 import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const FeaturedCard = ({ image, title, timer, ingredients }) => {
+const FeaturedDessert = ({ image, title, timer, ingredients }) => {
   return (
     <div className="relative hidden md:flex bg-white min-h-full  min-w-[240px] md:w-[400px] lg:w-[560px] rounded-[10px] shadow-xl cursor-pointer">
       <div className="flex items-center w-full h-full">
@@ -21,7 +21,7 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
             {title}
           </h1>
           <ul className="mt-1 ">
-            {ingredients.map((ingredient, index) => (
+            {ingredients.slice(0, 10).map((ingredient, index) => (
               <li
                 key={index}
                 className="w-full text-[8px] md:text-[8px] lg:text-[11px] font-semibold tracking-wider"
@@ -49,4 +49,4 @@ const FeaturedCard = ({ image, title, timer, ingredients }) => {
   );
 };
 
-export default FeaturedCard;
+export default FeaturedDessert;

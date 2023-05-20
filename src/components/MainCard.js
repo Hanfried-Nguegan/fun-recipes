@@ -3,14 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 
-const RecipeCard = ({
-  image,
-  title,
-  timer,
-  description,
-  ingredients,
-  recipe,
-}) => {
+const MainCard = ({ main }) => {
   const [isHover, setIsHover] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -68,7 +61,7 @@ const RecipeCard = ({
         >
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-300">
             <h1 className="textstyle font-bold text-lg md:text-xl mb-2">
-              {title}
+              {main.title}
             </h1>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
               <CloseIcon
@@ -80,9 +73,9 @@ const RecipeCard = ({
 
           <h2 className="text-sm md:text-base text-center mb-2">
             <span className="text-md md:text-lg font-bold">Ingredients: </span>
-            {ingredients}
+            {main.ingredients}
           </h2>
-          <h3 className="text-sm md:text-base">{recipe}</h3>
+          <h3 className="text-sm md:text-base">{main.recipe}</h3>
         </motion.div>
       </div>
     );
@@ -98,8 +91,8 @@ const RecipeCard = ({
         onClick={handleCardClick}
       >
         <div className="relative">
-          <Image
-            src={image}
+          <img
+            src={main?.imageUrl}
             alt="image"
             className="rounded-t-[10px] w-full h-auto"
             width={100}
@@ -108,17 +101,17 @@ const RecipeCard = ({
 
           <div className="absolute bottom-0 -left-1/2 transform translate-x-1/2 translate-y-1/2 flex items-center justify-between p-2 w-full">
             <h1 className="font-bold textstyle text-sm md:text-md lg:text-lg">
-              {title}
+              {main?.name}
             </h1>
             <p className="flex flex-col items-center bg-[#625eaf] rounded-full text-white p-2 text-xs md:text-md leading-3 font-semibold">
-              {timer}
+              {main?.timer}
               <br /> <span className="text-white">min</span>
             </p>
           </div>
         </div>
 
         <h3 className="text-xs font-semibold text-left mt-5 p-2 leading-3">
-          {description}
+          {main?.description}
         </h3>
       </div>
       {showModal && <Modal />}
@@ -126,4 +119,4 @@ const RecipeCard = ({
   );
 };
 
-export default RecipeCard;
+export default MainCard;

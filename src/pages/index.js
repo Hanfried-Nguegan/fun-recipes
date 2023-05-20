@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { Navbar, LeftSide, RightSide } from "../components";
+import { fetchDesserts } from "../utils/fetchDesserts";
+import { fetchMainDishes } from "../utils/fetchMainDishes";
 
-export default function Home() {
+export default function Home({ desserts, mainDishes }) {
   useEffect(() => {
     if (typeof window !== "object") {
       return;
@@ -32,9 +34,20 @@ export default function Home() {
     <>
       <main className="content relative w-full h-screen overflow-hidden">
         <Navbar />
-        <LeftSide />
-        <RightSide />
+        <LeftSide mainDishes={mainDishes} />
+        <RightSide desserts={desserts} />
       </main>
     </>
   );
 }
+
+export const getServerSideProps = async (context) => {
+  const desserts = await fetchDesserts();
+  const mainDishes = await fetchMainDishes();
+  return {
+    props: {
+      desserts,
+      mainDishes,
+    },
+  };
+};

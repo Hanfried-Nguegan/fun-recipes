@@ -6,7 +6,7 @@ import ArrowImageLeft from "./ArrowImageLeft";
 import RecipesCardLeft from "./RecipesCardLeft";
 import FeaturedRecipeLeft from "./FeaturedRecipeLeft";
 
-const LeftSide = () => {
+const LeftSide = ({ mainDishes }) => {
   const [showArrowButton, setShowArrowButton] = useState(true);
   const [showFeatured, setShowFeatured] = useState(false);
   const [showArrowImage, setShowArrowImage] = useState(true);
@@ -49,7 +49,7 @@ const LeftSide = () => {
       >
         <ArrowImageLeft />
       </motion.div>
-      <RecipesCardLeft />
+      <RecipesCardLeft mainDishes={mainDishes} />
       <motion.div
         initial={{ opacity: 0 }}
         animate={showFeatured ? { opacity: 1 } : { opacity: 0 }}

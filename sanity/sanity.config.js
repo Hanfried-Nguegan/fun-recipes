@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'fun-recipes',
 
-  projectId: 'gsyxnc19',
+  projectId: '64ak8pmc',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

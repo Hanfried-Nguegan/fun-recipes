@@ -17,8 +17,6 @@ const AddMainDish = () => {
     const [recipe, setRecipe] = useState("");
     const [titleError, setTitleError] = useState("");
     const [timerError, setTimerError] = useState("");
-    const [descriptionError, setDescriptionError] = useState("");
-    const [recipeError, setRecipeError] = useState("");
 
     const handleAddIngredient = () => {
       setIngredients([...ingredients, ""]);
@@ -53,17 +51,9 @@ const AddMainDish = () => {
         setTimerError("");
       }
 
-      if (typeof recipe !== "string" || recipe.trim() === "") {
-        isValid = false;
-        setRecipeError("Title should be a string");
-      } else {
-        setRecipeError("");
-      }
-
       // Submit the form data
       // You can access the form values using the state variables
       if (isValid) {
-        // Your form submission logic here
         console.log("Form submitted successfully!");
       }
     };
@@ -192,7 +182,6 @@ const AddMainDish = () => {
                     onChange={(e) => setRecipe(e.target.value)}
                     className="w-full px-3 py-2 bg-gray-200 text-gray-800 rounded-md focus:outline-none focus:bg-white"
                   />
-                  {recipeError && <p className="text-red-500">{recipeError}</p>}
                 </div>
                 <button
                   type="submit"
