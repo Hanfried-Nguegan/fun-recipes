@@ -101,7 +101,7 @@ const AddDessert = () => {
                     type="file"
                     id="image"
                     className="w-full bg-transparent text-gray-700"
-                    onChange={handleImageChange}
+                    onChange={(e) => setImage(e.target.files[0])}
                   />
                 </div>
 
