@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { urlFor } from "../../sanity";
 
 const AddDessert = () => {
   const [showForm, setShowForm] = useState(false);
@@ -44,12 +43,13 @@ const AddDessert = () => {
       });
 
       const json = await result.json();
+      console.log(json);
     };
 
     const handleSubmit = (e) => {
       e.preventDefault();
-
       postDessert();
+      setShowForm(false);
 
       // Submit the form data
       // You can access the form values using the state variables

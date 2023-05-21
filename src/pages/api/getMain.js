@@ -1,4 +1,4 @@
-import { sanityClient } from "../../../sanity";
+import sanityClient from "../../../sanity";
 import { groq } from "next-sanity";
 
 const mainQuery = groq`

@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { sanityClient } from "../../../sanity";
+import sanityClient from "../../../sanity";
 import { groq } from "next-sanity";
 
 const dessertQuery = groq`

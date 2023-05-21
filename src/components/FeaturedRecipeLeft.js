@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FeaturedMain from "./FeaturedMain";
-import { sanityClient } from "../../sanity";
+import sanityClient from "../../sanity";
 
 const FeaturedRecipeLeft = () => {
   const [featuredMain, setFeaturedMain] = useState([]);

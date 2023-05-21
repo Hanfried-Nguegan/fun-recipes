@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
+import fs from "fs";
+import path from "path";
 export default async function handler(req, res) {
   const data = JSON.parse(req.body);
 
@@ -9,7 +10,7 @@ export default async function handler(req, res) {
         create: {
           _type: "dessert",
           name: data.name,
-          image: data.image.name,
+          image: data.image,
           timer: data.timer,
           description: data.description,
           ingredients: data.ingredients,
@@ -29,6 +30,7 @@ export default async function handler(req, res) {
     body: JSON.stringify(mutations),
     method: "POST",
   });
+
   const json = await result.json();
   res.status(201).json({ message: "Added" });
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FeaturedDessert from "./FeaturedDessert";
-import { sanityClient } from "../../sanity";
+import sanityClient from "../../sanity";
 
 const FeaturedRecipeRight = () => {
   const [featuredDesserts, setFeaturedDesserts] = useState([]);
